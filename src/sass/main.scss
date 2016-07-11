@@ -24,7 +24,8 @@ $greyDateColor: #B0C6D3;
     left: 5%;
 }
 .container {
-    max-width: 600px;
+    // max-width: 500px;
+    max-width:100vw;
     margin: 25px auto;
     padding: 0 25px;
     color: white;
@@ -101,4 +102,80 @@ $greyDateColor: #B0C6D3;
     margin: 10px;
     font-weight: lighter;
     padding-bottom: 5px;
+}
+@media screen and (min-width: 650px) {
+
+  .container{
+  max-width: 100vw;
+  margin: 25px auto;
+  padding: 0 25px;
+  color: white;
+}
+
+    .arrow-up {
+    -ms-transform: rotate(-90deg); /* IE 9 */
+    -webkit-transform: rotate(-90deg); /* Safari */
+    transform: rotate(-90deg);
+      position: absolute;
+      top: 40px;
+      left: -15px;
+    }
+
+    .itemContainer {
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: row;
+        flex-direction: row;
+    }
+    .headerContainer {
+        -webkit-flex: 1 0 0;
+        flex: 1 0 0;
+    }
+    .bodyContainer {
+        -webkit-flex: 4 0 0;
+        flex: 4 0 0;
+    }
+
+    // .headerDate{
+    //   font-size:.8em;
+    // }
+
+    .headerTime{
+        font-size:1em;
+    }
+
+    .fontawesome-desktop{
+      float:right;
+      // font-size:1.5em;
+      padding-right:10%;
+    }
+
+}
+
+@media screen and (min-width: 800px) {
+  .headerTime{
+    font-size:1.5em;
+  }
+
+  .fontawesome-desktop{
+    float:right;
+    padding-right:10%;
+    // position:relative;
+    // padding-left:80%;
+  }
+
+}
+
+
+@media screen and (min-width: 1100px) {
+  .container{
+  max-width: 100vw;
+  margin: 25px auto;
+  padding: 0 25px;
+  color: white;
+}
+
+  .headerTime{
+    font-size:2em;
+  }
 }
