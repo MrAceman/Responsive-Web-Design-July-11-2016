@@ -1,0 +1,104 @@
+$lightBlueColor: #6CBFEE;
+$darkBlueColor: #3594CB;
+$greyDateColor: #B0C6D3;
+@import url(http://weloveiconfonts.com/api/?family=fontawesome);
+/* fontawesome */
+[class*="fontawesome-desktop"]:before {
+    font-family: 'FontAwesome', sans-serif;
+    display: inline-block;
+    float: right;
+}
+[class*="fontawesome-envelope-alt"]:before {
+    font-family: 'FontAwesome', sans-serif;
+}
+/* Enough of this fontawesome stuff */
+.arrow-up {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    top: -10px;
+    left: 5%;
+}
+.container {
+    max-width: 600px;
+    margin: 25px auto;
+    padding: 0 25px;
+    color: white;
+}
+.itemContainer {
+    width: 90%;
+    margin: 10px auto 20px;
+}
+.headerContainer {
+    width: 90%;
+    margin: 10px auto;
+}
+.headerDate {
+    font-size: 1em;
+}
+.headerTime {
+    display: block;
+    font-size: 2em;
+}
+.headerIcon {
+    float: right;
+}
+.itemContainer:nth-child(odd) {
+    .headerContainer {
+        .headerDate {
+            color: $greyDateColor;
+        }
+        .headerTime {
+            color: $lightBlueColor;
+        }
+        .headerIcon {
+            color: $lightBlueColor;
+        }
+    }
+    .bodyContainer {
+        background-color: $lightBlueColor;
+        .arrow-up {
+            border-bottom: 10px solid $lightBlueColor;
+        }
+    }
+}
+.itemContainer:nth-child(even) {
+    .headerContainer {
+        .headerDate {
+            color: $greyDateColor;
+        }
+        .headerTime {
+            color: $darkBlueColor;
+        }
+        .headerIcon {
+            color: $darkBlueColor;
+        }
+    }
+    .bodyContainer {
+        background-color: $darkBlueColor;
+        .arrow-up {
+            border-bottom: 10px solid $darkBlueColor;
+        }
+    }
+}
+.bodyContainer {
+    width: 90%;
+    margin: 10px auto;
+    border-radius: 10px;
+    position: relative;
+}
+.bodyTitle {
+    margin: 10px;
+    padding-top: 5px;
+    border-bottom: 1px solid white;
+    font-size: 1.2em;
+}
+.bodyContent {
+    margin: 10px;
+    font-weight: lighter;
+    padding-bottom: 5px;
+}
